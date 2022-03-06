@@ -161,7 +161,7 @@ class Clock:
     def adan_window(self,root):
         splash_screen = tk.Frame(root, background='#800000')
         splash_screen.place(relwidth=1.0, relheight=1.0)
-        load = Image.open("C:/Users/DELL/PycharmProjects/islamic clock/images/Silent_Mode.jpg")
+        load = Image.open("Silent_Mode.jpg")
         new_load = load.resize((500, 500))
         bg = ImageTk.PhotoImage(new_load)
         # Create Canvas
@@ -170,7 +170,7 @@ class Clock:
         # Display image
         canvas1.create_image(0, 0, image=bg, anchor="nw")
         pygame.mixer.init()
-        pygame.mixer.music.load("C:/Users/DELL/PycharmProjects/islamic clock/videos/Adan Makkah.mp3")
+        pygame.mixer.music.load("Adan Makkah.mp3")
         pygame.mixer.music.play(loops=0)
         while pygame.mixer.music.get_busy():
             splash_screen.update()
